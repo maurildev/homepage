@@ -72,4 +72,7 @@ export default {
     background: var(--hoverBackgroundColor);
     color: var(--hoverColor)
 }
+.pill:focus {
+    outline: none;
+}
 </style>
