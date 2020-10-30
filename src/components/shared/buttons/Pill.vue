@@ -1,7 +1,7 @@
 <template>
     <button class="pill" :style="styles">
         <img class="pill__img" :src="imgUrl" v-if="imgUrl">
-        <span class="pill_text">{{ text }}</span>
+        <span class="pill__text">{{ text }}</span>
     </button>
 </template>
 
