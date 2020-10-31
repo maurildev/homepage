@@ -1,10 +1,11 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import Language from '@/views/Language.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: undefined
+    name: 'Language',
+    component: Language
   }
 ]
 

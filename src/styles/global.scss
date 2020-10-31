@@ -1,0 +1,16 @@
+//variables
+$white: #fff;
+
+//mixins
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin screen {
+    height: 100vh;
+    @include tablet {
+        height: 100%;
+    }
+}
