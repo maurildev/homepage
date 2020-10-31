@@ -65,6 +65,7 @@ export default {
 
   &__pills {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       margin-top: 3rem;
   }
