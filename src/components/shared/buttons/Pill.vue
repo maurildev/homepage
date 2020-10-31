@@ -52,6 +52,7 @@ export default {
 
 .pill {
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: var(--backgroundColor);
     color: var(--color);
