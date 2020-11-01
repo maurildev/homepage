@@ -1,1 +1,5 @@
-export const enTranslations = { };
+export const enTranslations = { 
+    navBar: {
+        back: 'Back'
+    }
+};
