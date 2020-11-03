@@ -1,34 +1,46 @@
 <template>
-    <div class="chat-screen">
-      <v-nav-bar :isBackButtonVisible="false" :isHomeButtonHighlighted="highlightHomeButton" />
-      <div class="chat-screen__chat-simulator">
-        <v-chat-simulator  :messages="messages" @completed="highlightHomeButton = true"/>
-      </div>
+  <div class="chat-screen">
+    <v-nav-bar
+      :isBackButtonVisible="false"
+      :isHomeButtonHighlighted="highlightHomeButton"
+    />
+    <div class="chat-screen__chat-simulator">
+      <v-chat-simulator
+        :messages="messages"
+        @completed="highlightHomeButton = true"
+      />
     </div>
+  </div>
 </template>
 
 <script>
 import ChatSimulator from 'vue-chat-simulator';
 import NavBar from '@/components/shared/navigation/NavBar.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   components: {
     'v-chat-simulator': ChatSimulator,
-    'v-nav-bar': NavBar
+    'v-nav-bar': NavBar,
   },
   data() {
     return {
       highlightHomeButton: false,
-      messages: [
-        'Heey 👋🏽 ',
-        'Ich bin Mauril, ein Frontend Developer',
-        'Ich habe mir überlegt, wie du mich am besten kennenlernst',
-        'Und es gibt doch nichts persönlicheres als das eigene Smartphone oder ?!',
-        'Also viel Spaß, beim stöbern ',
-      ],
-    }
-  }
-}
+    };
+  },
+  computed: {
+    ...mapGetters(['translations']),
+    messages() {
+      return [
+        this.translations.introChat.chatMessage1,
+        this.translations.introChat.chatMessage2,
+        this.translations.introChat.chatMessage3,
+        this.translations.introChat.chatMessage4,
+        this.translations.introChat.chatMessage5,
+      ];
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -39,4 +51,3 @@ export default {
   background: $white;
 }
 </style>
-
