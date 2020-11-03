@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
 import Pill from "@/components/shared/buttons/Pill.vue";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
   name: "Language",
