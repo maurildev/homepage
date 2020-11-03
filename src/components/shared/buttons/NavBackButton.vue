@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 
 export default {
-  name: 'NavBackButton',
+  name: "NavBackButton",
   props: {
     isVisible: {
       type: Boolean,
@@ -25,25 +25,25 @@ export default {
     },
     backgroundColor: {
       type: String,
-      default: 'transparent',
+      default: "transparent",
       required: false,
     },
     color: {
       type: String,
-      default: '#438cf7',
+      default: "#438cf7",
       required: false,
     },
   },
   data() {
     return {
       styles: {
-        '--backgroundColor': this.backgroundColor,
-        '--color': this.color,
+        "--backgroundColor": this.backgroundColor,
+        "--color": this.color,
       },
     };
   },
   computed: {
-    ...mapGetters(['translations']),
+    ...mapGetters(["translations"]),
   },
 };
 </script>

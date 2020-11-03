@@ -6,17 +6,17 @@
     :style="styles"
   >
     <div class="fab__img">
-        <slot name="fab__img" ></slot>
+      <slot name="fab__img"></slot>
     </div>
     <div class="fab__text">
-        <slot name="fab__text"></slot>
+      <slot name="fab__text"></slot>
     </div>
   </button>
 </template>
 
 <script>
 export default {
-  name: 'FloatingActionButton',
+  name: "FloatingActionButton",
   props: {
     isVisible: {
       type: Boolean,
@@ -30,23 +30,23 @@ export default {
     },
     backgroundColor: {
       type: String,
-      default: 'transparent',
+      default: "transparent",
       required: false,
     },
     color: {
       type: String,
-      default: '#438cf7',
+      default: "#438cf7",
       required: false,
     },
   },
   data() {
     return {
       styles: {
-        '--backgroundColor': this.backgroundColor,
-        '--color': this.color,
+        "--backgroundColor": this.backgroundColor,
+        "--color": this.color,
       },
     };
-  }
+  },
 };
 </script>
 

@@ -1,35 +1,34 @@
 <template>
   <v-phone>
-    <router-view/>
+    <router-view />
   </v-phone>
 </template>
 
 <script>
-import Phone from '@/components/Phone.vue';
-import { mapMutations } from 'vuex';
+import Phone from "@/components/Phone.vue";
+import { mapMutations } from "vuex";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    'v-phone': Phone
+    "v-phone": Phone,
   },
   methods: {
-    ...mapMutations([
-      'initiliaseLanguageFromLocalStorage',
-      'setLanguage'
-    ])
+    ...mapMutations(["initiliaseLanguageFromLocalStorage", "setLanguage"]),
   },
   watch: {
     $route() {
-      if(this.$route.meta.languageCode != localStorage.getItem('languageCode')) {
+      if (
+        this.$route.meta.languageCode != localStorage.getItem("languageCode")
+      ) {
         this.setLanguage(this.$route.meta.languageCode);
       }
-    }
+    },
   },
   created() {
     this.initiliaseLanguageFromLocalStorage();
-  }  
-}
+  },
+};
 </script>
 
 <style lang="scss">
@@ -55,7 +54,7 @@ body {
     background-image: url(https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
   }
 }
 </style>

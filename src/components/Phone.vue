@@ -1,254 +1,275 @@
 <template>
-    <main class="iphone-x big">
-        <div class="notch">
-            <div class="camera"></div>
-            <div class="speaker"></div>
-        </div>
-        <div class="top-bar"></div>
-        <div class="sleep"></div>
-        <div class="bottom-bar"></div>
-        <div class="volume"></div>
-        <div class="overflow">
-            <div class="shadow shadow--tr"></div>
-            <div class="shadow shadow--tl"></div>
-            <div class="shadow shadow--br"></div>
-            <div class="shadow shadow--bl"></div>
-        </div>
-        <div class="inner-shadow"></div>
-        <div class="screen">
-            <slot></slot>
-        </div>
-    </main>
+  <main class="iphone-x big">
+    <div class="notch">
+      <div class="camera"></div>
+      <div class="speaker"></div>
+    </div>
+    <div class="top-bar"></div>
+    <div class="sleep"></div>
+    <div class="bottom-bar"></div>
+    <div class="volume"></div>
+    <div class="overflow">
+      <div class="shadow shadow--tr"></div>
+      <div class="shadow shadow--tl"></div>
+      <div class="shadow shadow--br"></div>
+      <div class="shadow shadow--bl"></div>
+    </div>
+    <div class="inner-shadow"></div>
+    <div class="screen">
+      <slot></slot>
+    </div>
+  </main>
 </template>
 
 <style lang="scss" scoped>
-@media only screen and (min-width : 768px) {
-    .iphone-x {
-        display: inline-block;
-        position: relative;
-        box-sizing: content-box !important;
-        margin: auto;
-        padding: 26px;
-        box-shadow:inset 0 0 11px 0 black;
-        border-radius: 66px;
-    
-        .top-bar, .bottom-bar {
-            height: 3px;
-            background: black;
-            width: 100%;
-            display: block;
-        }
-    
-        .middle-bar {
-            width: 3px;
-            height: 4px;
-            top: 0px;
-            left: 90px;
-            background: black;
-            position: absolute;
-        }
-    
-        &.iphone-x {            
-            &.big{
-                width: 340px;
-                height: 715px;
-            }
-    
-            .overflow {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                border-radius: 66px;
-                overflow: hidden;
-            }
-    
-            .shadow {
-                border-radius: 100%;
-                width: 90px;
-                height: 90px;
-                position: absolute;
-                background: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%,rgba(255,255,255,0) 60%);
-            }
-    
-            .shadow--tl {
-                top: -20px;
-                left: -20px;
-            }
-    
-            .shadow--tr {
-                top: -20px;
-                right: -20px;
-            }
-    
-            .shadow--bl {
-                bottom: -20px;
-                left: -20px;
-            }
-    
-            .shadow--br {
-                bottom: -20px;
-                right: -20px;
-            }
-    
-            &:before{
-                width: calc(100% - 10px);
-                height: calc(100% - 10px);
-                position: absolute;
-                top: 5px;
-                content: '';
-                left: 5px;
-                border-radius: 61px;
-                background: black;
-                z-index: 1;
-            }
-    
-            .inner-shadow{
-                width: calc(100% - 20px);
-                height: calc(100% - 20px);
-                position: absolute;
-                top: 10px;
-                overflow: hidden;
-                left: 10px;
-                border-radius: 56px;
-                box-shadow: inset 0 0 15px 0 rgba(white, 0.66);
-                z-index: 1;
-    
-                &:before{
-                    box-shadow:inset 0 0 20px 0 #FFFFFF;
-                    width: 100%;
-                    height: 116%;
-                    position: absolute;
-                    top: -8%;
-                    content: '';
-                    left: 0;
-                    border-radius: 200px / 112px;
-                    z-index: 2;
-                }
-            }
+@media only screen and (min-width: 768px) {
+  .iphone-x {
+    display: inline-block;
+    position: relative;
+    box-sizing: content-box !important;
+    margin: auto;
+    padding: 26px;
+    box-shadow: inset 0 0 11px 0 black;
+    border-radius: 66px;
 
-            .screen {
-                width: 100vw;
-                height: 100%;   
-                position: fixed;
-                z-index: 1;     
-            }
-
-            @media only screen and (min-width : 768px) {
-                .screen{
-                    position: relative;
-                    width: 100%;
-                    height:100%;
-                    border-radius: 40px;
-                    box-shadow: none;   
-                    overflow: hidden; 
-                }
-            }
-            
-            .top-bar, .bottom-bar {
-                width: 100%;
-                position: absolute;
-                height: 8px;
-                background: rgba(black, 0.1);
-                left: 0;
-            }
-    
-            .top-bar {
-                top: 80px;
-            }
-    
-            .bottom-bar {
-                bottom: 80px;
-            }
-    
-            .volume, .volume:before, .volume:after, .sleep {
-                width: 3px;
-                background: #b5b5b5;
-                position: absolute;
-            }
-    
-            .volume {
-                left: -3px;
-                top: 116px;
-                height: 32px;
-    
-                &:before {
-                    height: 62px;
-                    top: 62px;
-                    content: '';
-                    left: 0;
-                }
-    
-                &:after {
-                    height: 62px;
-                    top: 140px;
-                    content: '';
-                    left: 0;
-                }
-            }
-    
-            .sleep {
-                height: 96px;
-                top: 200px;
-                right: -3px;
-            }
-    
-            .camera {
-                width: 6px;
-                height: 6px;
-                top: 9px;
-                border-radius: 100%;
-                position: absolute;
-                left: 154px;
-                background: #0d4d71;
-            }
-    
-            .speaker {
-                height: 6px;
-                width: 60px;
-                left: 50%;
-                position: absolute;
-                top: 9px;
-                margin-left: -30px;
-                background: #171818;
-                border-radius: 6px;
-            }
-            
-            &.big .notch{
-                left: 90px;
-    
-            }
-    
-            .notch {
-                position: absolute;
-                width: 210px;
-                height: 30px;
-                top: 26px;
-                z-index: 4;
-                background: black;
-                border-bottom-left-radius: 24px;
-                border-bottom-right-radius: 24px;
-    
-                &:before, &:after {
-                    content: '';
-                    height: 8px;
-                    position: absolute;
-                    top: 0;
-                    width: 8px;
-                }
-    
-                &:after {
-                    background: radial-gradient(circle at bottom left, transparent 0, transparent 70%, black 70%, black 100%);
-                    left: -8px;
-                }
-    
-                &:before {
-                    background: radial-gradient(circle at bottom right, transparent 0, transparent 70%, black 70%, black 100%);
-                    right: -8px;
-                }
-            }
-        }
+    .top-bar,
+    .bottom-bar {
+      height: 3px;
+      background: black;
+      width: 100%;
+      display: block;
     }
-}    
+
+    .middle-bar {
+      width: 3px;
+      height: 4px;
+      top: 0px;
+      left: 90px;
+      background: black;
+      position: absolute;
+    }
+
+    &.iphone-x {
+      &.big {
+        width: 340px;
+        height: 715px;
+      }
+
+      .overflow {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 66px;
+        overflow: hidden;
+      }
+
+      .shadow {
+        border-radius: 100%;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        background: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0.6) 0%,
+          rgba(255, 255, 255, 0) 60%
+        );
+      }
+
+      .shadow--tl {
+        top: -20px;
+        left: -20px;
+      }
+
+      .shadow--tr {
+        top: -20px;
+        right: -20px;
+      }
+
+      .shadow--bl {
+        bottom: -20px;
+        left: -20px;
+      }
+
+      .shadow--br {
+        bottom: -20px;
+        right: -20px;
+      }
+
+      &:before {
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        position: absolute;
+        top: 5px;
+        content: "";
+        left: 5px;
+        border-radius: 61px;
+        background: black;
+        z-index: 1;
+      }
+
+      .inner-shadow {
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        position: absolute;
+        top: 10px;
+        overflow: hidden;
+        left: 10px;
+        border-radius: 56px;
+        box-shadow: inset 0 0 15px 0 rgba(white, 0.66);
+        z-index: 1;
+
+        &:before {
+          box-shadow: inset 0 0 20px 0 #ffffff;
+          width: 100%;
+          height: 116%;
+          position: absolute;
+          top: -8%;
+          content: "";
+          left: 0;
+          border-radius: 200px / 112px;
+          z-index: 2;
+        }
+      }
+
+      .screen {
+        width: 100vw;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .screen {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          border-radius: 40px;
+          box-shadow: none;
+          overflow: hidden;
+        }
+      }
+
+      .top-bar,
+      .bottom-bar {
+        width: 100%;
+        position: absolute;
+        height: 8px;
+        background: rgba(black, 0.1);
+        left: 0;
+      }
+
+      .top-bar {
+        top: 80px;
+      }
+
+      .bottom-bar {
+        bottom: 80px;
+      }
+
+      .volume,
+      .volume:before,
+      .volume:after,
+      .sleep {
+        width: 3px;
+        background: #b5b5b5;
+        position: absolute;
+      }
+
+      .volume {
+        left: -3px;
+        top: 116px;
+        height: 32px;
+
+        &:before {
+          height: 62px;
+          top: 62px;
+          content: "";
+          left: 0;
+        }
+
+        &:after {
+          height: 62px;
+          top: 140px;
+          content: "";
+          left: 0;
+        }
+      }
+
+      .sleep {
+        height: 96px;
+        top: 200px;
+        right: -3px;
+      }
+
+      .camera {
+        width: 6px;
+        height: 6px;
+        top: 9px;
+        border-radius: 100%;
+        position: absolute;
+        left: 154px;
+        background: #0d4d71;
+      }
+
+      .speaker {
+        height: 6px;
+        width: 60px;
+        left: 50%;
+        position: absolute;
+        top: 9px;
+        margin-left: -30px;
+        background: #171818;
+        border-radius: 6px;
+      }
+
+      &.big .notch {
+        left: 90px;
+      }
+
+      .notch {
+        position: absolute;
+        width: 210px;
+        height: 30px;
+        top: 26px;
+        z-index: 4;
+        background: black;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+
+        &:before,
+        &:after {
+          content: "";
+          height: 8px;
+          position: absolute;
+          top: 0;
+          width: 8px;
+        }
+
+        &:after {
+          background: radial-gradient(
+            circle at bottom left,
+            transparent 0,
+            transparent 70%,
+            black 70%,
+            black 100%
+          );
+          left: -8px;
+        }
+
+        &:before {
+          background: radial-gradient(
+            circle at bottom right,
+            transparent 0,
+            transparent 70%,
+            black 70%,
+            black 100%
+          );
+          right: -8px;
+        }
+      }
+    }
+  }
+}
 </style>

@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import ChatSimulator from 'vue-chat-simulator';
-import NavBar from '@/components/shared/navigation/NavBar.vue';
-import { mapGetters } from 'vuex';
+import ChatSimulator from "vue-chat-simulator";
+import NavBar from "@/components/shared/navigation/NavBar.vue";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
-    'v-chat-simulator': ChatSimulator,
-    'v-nav-bar': NavBar,
+    "v-chat-simulator": ChatSimulator,
+    "v-nav-bar": NavBar,
   },
   data() {
     return {
@@ -29,7 +29,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['translations']),
+    ...mapGetters(["translations"]),
     messages() {
       return [
         this.translations.introChat.chatMessage1,

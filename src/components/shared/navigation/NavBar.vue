@@ -26,14 +26,14 @@
 </template>
 
 <script>
-import NavBackButton from '@/components/shared/buttons/NavBackButton.vue';
-import FloatingActionButton from '@/components/shared/buttons/FloatingActionButton.vue';
+import NavBackButton from "@/components/shared/buttons/NavBackButton.vue";
+import FloatingActionButton from "@/components/shared/buttons/FloatingActionButton.vue";
 
 export default {
-  name: 'NavBar',
+  name: "NavBar",
   components: {
-    'v-nav-back-button': NavBackButton,
-    'v-fab': FloatingActionButton,
+    "v-nav-back-button": NavBackButton,
+    "v-fab": FloatingActionButton,
   },
   props: {
     isBackButtonVisible: {
@@ -48,20 +48,20 @@ export default {
     },
     backgroundColor: {
       type: String,
-      default: '#fbfaff',
+      default: "#fbfaff",
       required: false,
     },
     color: {
       type: String,
-      default: '#438cf7',
+      default: "#438cf7",
       required: false,
     },
   },
   data() {
     return {
       styles: {
-        '--backgroundColor': this.backgroundColor,
-        '--color': this.color,
+        "--backgroundColor": this.backgroundColor,
+        "--color": this.color,
       },
     };
   },

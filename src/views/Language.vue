@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { mapGetters, mapMutations } from "vuex";
 import Pill from "@/components/shared/buttons/Pill.vue";
 
 export default {
@@ -37,15 +37,11 @@ export default {
     "v-pill": Pill,
   },
   computed: {
-    ...mapGetters([
-      'translations'
-    ]),
+    ...mapGetters(["translations"]),
   },
   methods: {
-    ...mapMutations([
-      'setLanguage'
-    ]),
-  }
+    ...mapMutations(["setLanguage"]),
+  },
 };
 </script>
 
@@ -64,18 +60,19 @@ export default {
   }
 
   &__pills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3rem;
   }
 }
 
-@keyframes spin { 
-    from { 
-        transform: rotate(0deg); 
-    } to { 
-        transform: rotate(360deg); 
-    }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>
