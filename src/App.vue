@@ -6,11 +6,28 @@
 
 <script>
 import Phone from '@/components/Phone.vue';
+import { mapMutations } from 'vuex';
 
 export default {
   name: 'App',
   components: {
     'v-phone': Phone
+  },
+  methods: {
+    ...mapMutations([
+      'initiliaseLanguageFromLocalStorage',
+      'setLanguage'
+    ])
+  },
+  watch: {
+    $route() {
+      if(this.$route.meta.languageCode != localStorage.getItem('languageCode')) {
+        this.setLanguage(this.$route.meta.languageCode);
+      }
+    }
+  },
+  created() {
+    this.initiliaseLanguageFromLocalStorage();
   }  
 }
 </script>
