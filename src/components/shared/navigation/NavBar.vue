@@ -18,7 +18,7 @@
           </svg>
         </template>
         <template v-slot:fab__text>
-          Klick mich !
+          {{ translations.navBar.floatingActionButton }}
         </template>
       </v-fab>
     </div>
@@ -28,6 +28,7 @@
 <script>
 import NavBackButton from "@/components/shared/buttons/NavBackButton.vue";
 import FloatingActionButton from "@/components/shared/buttons/FloatingActionButton.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "NavBar",
@@ -64,6 +65,9 @@ export default {
         "--color": this.color,
       },
     };
+  },
+  computed: {
+    ...mapGetters(["translations"]),
   },
 };
 </script>
