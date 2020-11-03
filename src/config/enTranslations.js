@@ -1,5 +1,6 @@
 export const enTranslations = { 
     navBar: {
-        back: 'Back'
+        navBackButton: 'Back',
+        floatingActionButton: 'Click me !'
     }
 };
