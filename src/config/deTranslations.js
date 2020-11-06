@@ -11,4 +11,9 @@ export const deTranslations = {
       "Und es gibt doch nichts persönlicheres als das eigene Smartphone oder ?!",
     chatMessage5: "Also viel Spaß, beim stöbern ✌🏽",
   },
+  home: {
+    photoAppButton: "Fotos",
+    cvAppButton: "CV",
+    technologyAppButton: "Technologien"
+  }
 };

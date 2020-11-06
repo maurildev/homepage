@@ -13,16 +13,6 @@ const getters = {
 }
 
 const mutations = {
-  initiliaseLanguageFromLocalStorage(state){
-    switch (localStorage.getItem('languageCode')) {
-      case 'de':
-        state.translations = deTranslations;
-        break;
-      case 'en':
-        state.translations = enTranslations;
-        break;
-    }
-  },
   setLanguage(state, languageCode) {
     switch (languageCode) {
       case 'de':

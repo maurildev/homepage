@@ -11,4 +11,9 @@ export const enTranslations = {
       "And there is nothing more personal than your own smartphone, am I right ?!",
     chatMessage5: "So have fun while browsing ✌🏽",
   },
+  home: {
+    photoAppButton: "Photos",
+    cvAppButton: "CV",
+    technologyAppButton: "Technologies"
+  }
 };

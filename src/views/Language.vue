@@ -12,7 +12,7 @@
         color="#000"
         hoverBackgroundColor="#1b8856"
         hoverColor="#fff"
-        @click="setLanguage('en')"
+        @click="setLanguageAndNavigate('en')"
       />
       <v-pill
         :imgUrl="require('@/assets/svg/flag-germany.svg')"
@@ -21,7 +21,7 @@
         color="#000"
         hoverBackgroundColor="#1b8856"
         hoverColor="#fff"
-        @click="setLanguage('de')"
+        @click="setLanguageAndNavigate('de')"
       />
     </div>
   </div>
@@ -29,18 +29,19 @@
 
 <script>
 import Pill from "@/components/shared/buttons/Pill.vue";
-import { mapGetters, mapMutations } from "vuex";
+import { mapMutations } from "vuex";
 
 export default {
   name: "Language",
   components: {
     "v-pill": Pill,
   },
-  computed: {
-    ...mapGetters(["translations"]),
-  },
   methods: {
     ...mapMutations(["setLanguage"]),
+    setLanguageAndNavigate(languageCode) {
+      this.setLanguage(languageCode);
+      this.$router.push({name: `chat-${languageCode}`});
+    }
   },
 };
 </script>
