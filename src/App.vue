@@ -14,7 +14,7 @@ export default {
     "v-phone": Phone,
   },
   methods: {
-    ...mapMutations(["initiliaseLanguageFromLocalStorage", "setLanguage"]),
+    ...mapMutations(["setLanguage"]),
   },
   watch: {
     $route() {
@@ -26,8 +26,8 @@ export default {
     },
   },
   created() {
-    this.initiliaseLanguageFromLocalStorage();
-  },
+    this.setLanguage(localStorage.getItem('languageCode'));
+  }
 };
 </script>
 
