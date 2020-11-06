@@ -1,3 +1,4 @@
+import Home from "@/views/Home.vue";
 import Chat from '@/views/Chat.vue';
 import Language from '@/views/Language.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
@@ -5,12 +6,36 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
   {
     path: '/',
-    name: 'Language',
+    component: undefined,
+    beforeEnter: (from, to, next) => {
+      const languageCode = localStorage.getItem("languageCode");
+      (languageCode) ? next({ name: `home-${languageCode}` }) : next({ name: "language" });
+    }
+  },
+  {
+    path: '/select-language/',
+    name: 'language',
     component: Language
   },
   {
+    path: '/de/',
+    name: 'home-de',
+    meta: {
+      languageCode: "de",
+    },
+    component: Home
+  },
+  {
+    path: '/en/',
+    name: 'home-en',
+    meta: {
+      languageCode: "en",
+    },
+    component: Home
+  },
+  {
     path: '/de/chat/',
-    name: 'deChat',
+    name: 'chat-de',
     meta: {
       languageCode: "de",
     },
@@ -18,7 +43,7 @@ const routes = [
   },
   {
     path: '/en/chat/',
-    name: 'enChat',
+    name: 'chat-en',
     meta: {
       languageCode: "en",
     },
@@ -30,5 +55,4 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
-
 export default router
