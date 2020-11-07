@@ -22,7 +22,10 @@
       <v-app-button
         imgUrl="http://maurilsalb.com/assets/ios_icons/Messages.png"
       />
-      <v-app-button imgUrl="http://maurilsalb.com/assets/ios_icons/Mail.png" />
+      <v-app-button
+        imgUrl="http://maurilsalb.com/assets/ios_icons/Mail.png"
+        @click="$router.push({ name: `mails-${$route.meta.languageCode}` })"
+      />
     </div>
   </div>
 </template>

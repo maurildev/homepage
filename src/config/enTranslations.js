@@ -15,5 +15,13 @@ export const enTranslations = {
     photoAppButton: "Photos",
     cvAppButton: "CV",
     technologyAppButton: "Technologies"
+  },
+  mails: {
+    npmSubject: "Repository vue-chat-simulator-demo ...",
+    npmMessage: "Hey maurildev. Your repository vue-chat-simulator was successfully created !",
+    gitHubChatSimulatorSubject: "Repository vue-chat-simulator-demo ...",
+    gitHubChatSimulatorMessage:  "Hey maurildev. Your repository vue-chat-simulator was successfully created !",
+    gitHubMaurilDevSubject: "Repository maurildev-homepage ...",
+    gitHubMaurilDevMessage: "Hey maurildev. Your repository maurildev-homepage was successfully created !"
   }
 };

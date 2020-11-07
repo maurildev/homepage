@@ -2,6 +2,7 @@ import Language from '@/views/Language.vue';
 import Home from "@/views/Home.vue";
 import Chat from '@/views/Chat.vue';
 import Contact from '@/views/Contact.vue';
+import Mails from "@/views/Mails.vue";
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routes = [
@@ -65,6 +66,22 @@ const routes = [
       languageCode: "en",
     },
     component: Contact
+  },
+  {
+    path: '/de/mails/',
+    name: 'mails-de',
+    meta: {
+      languageCode: "de",
+    },
+    component: Mails
+  },
+  {
+    path: '/en/mails/',
+    name: 'mails-en',
+    meta: {
+      languageCode: "en",
+    },
+    component: Mails
   },
 ]
 
