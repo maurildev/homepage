@@ -3,6 +3,7 @@ import Home from "@/views/Home.vue";
 import Chat from '@/views/Chat.vue';
 import Contact from '@/views/Contact.vue';
 import Mails from "@/views/Mails.vue";
+import Photos from "@/views/Photos.vue";
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routes = [
@@ -82,6 +83,22 @@ const routes = [
       languageCode: "en",
     },
     component: Mails
+  },
+  {
+    path: '/de/fotos/',
+    name: 'photos-de',
+    meta: {
+      languageCode: "en",
+    },
+    component: Photos
+  },
+  {
+    path: '/en/photos/',
+    name: 'photos-en',
+    meta: {
+      languageCode: "en",
+    },
+    component: Photos
   },
 ]
 
