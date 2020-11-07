@@ -4,6 +4,7 @@
       <v-app-button
         imgUrl="http://maurilsalb.com/assets/ios_icons/Photos.png"
         :text="translations.home.photoAppButton"
+        @click="$router.push({ name: `photos-${$route.meta.languageCode}` })"
       />
       <v-app-button
         imgUrl="http://maurilsalb.com/assets/ios_icons/CV.png"
