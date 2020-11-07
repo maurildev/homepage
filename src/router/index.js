@@ -88,7 +88,7 @@ const routes = [
     path: '/de/fotos/',
     name: 'photos-de',
     meta: {
-      languageCode: "en",
+      languageCode: "de",
     },
     component: Photos
   },
