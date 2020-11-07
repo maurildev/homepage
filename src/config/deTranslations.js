@@ -15,5 +15,13 @@ export const deTranslations = {
     photoAppButton: "Fotos",
     cvAppButton: "CV",
     technologyAppButton: "Technologien"
+  },
+  mails: {
+    npmSubject: "Vue-chat-simulator wurde veröfffentlicht...",
+    npmMessage: "Hi maurildev! Eine neue Version von vue-chat-simulator (1.0.2) wurde veröffentlicht.",
+    gitHubChatSimulatorSubject: "Repository maurildev-homepage ...",
+    gitHubChatSimulatorMessage:  "Hey maurildev. Dein repository vue-chat-simulator wurde erfolgreich erstellt !",
+    gitHubMaurilDevSubject: "Repository maurildev-homepage ...",
+    gitHubMaurilDevMessage: "Hey maurildev. Dein repository maurildev-homepage wurde erfolgreich erstellt !"
   }
 };
