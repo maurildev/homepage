@@ -5,7 +5,7 @@
       <v-avatar-image
         imgUrl="http://maurilsalb.com/assets/images/portrait.jpg"
         text="Mauril"
-        bigr
+        big
       />
     </div>
     <div class="contact-screen-contact-info">
