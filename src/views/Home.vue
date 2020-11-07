@@ -15,8 +15,13 @@
       />
     </div>
     <div class="home-screen__fav-bar">
-      <v-app-button imgUrl="http://maurilsalb.com/assets/ios_icons/Phone.png" />
-      <v-app-button imgUrl="http://maurilsalb.com/assets/ios_icons/Messages.png" />
+      <v-app-button
+        imgUrl="http://maurilsalb.com/assets/ios_icons/Phone.png"
+        @click="$router.push({ name: `contact-${$route.meta.languageCode}` })"
+      />
+      <v-app-button
+        imgUrl="http://maurilsalb.com/assets/ios_icons/Messages.png"
+      />
       <v-app-button imgUrl="http://maurilsalb.com/assets/ios_icons/Mail.png" />
     </div>
   </div>
@@ -32,7 +37,7 @@ export default {
     "v-app-button": AppButton,
   },
   computed: {
-    ...mapGetters(["translations"])
+    ...mapGetters(["translations"]),
   },
 };
 </script>
@@ -49,17 +54,17 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px 100px 100px;
-    height: calc(100% - 140px); /* 100px for the favbar */ 
+    height: calc(100% - 140px); /* 100px for the favbar */
   }
 
-  &__fav-bar{
+  &__fav-bar {
     display: flex;
     justify-content: space-evenly;
-    width:95%;
-    height:80px;
+    width: 95%;
+    height: 80px;
     background: #efefefe8;
     border-radius: 30px;
-    margin: auto;    
+    margin: auto;
   }
 }
 </style>
