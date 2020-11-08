@@ -51,7 +51,9 @@ export default {
 
 .home-screen {
   @include screen;
-  background: linear-gradient(#060606, #2c3b71);
+  background: linear-gradient(182deg, #060606, #2c3b71, #b72a54, #7b9ed7);
+  background-size: 600% 600%;
+  animation: change-background 60s ease infinite;
   padding-top: 50px;
 
   &__app-btns {
@@ -71,4 +73,17 @@ export default {
     margin: auto;
   }
 }
+
+@keyframes change-background {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
 </style>
