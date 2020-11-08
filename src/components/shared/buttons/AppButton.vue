@@ -29,6 +29,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: scale 0.75s ease 0s;
   cursor: pointer;
 
   &__img {
@@ -41,6 +42,31 @@ export default {
     font-weight: bold;
     color: $white;
     margin-top: 5px;
+  }
+
+  &:hover &__img {
+    animation: rotate 1s ease-in-out infinite;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
   }
 }
 </style>
