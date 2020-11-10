@@ -8,49 +8,32 @@
         big
       />
     </div>
-    <div class="contact-screen-contact-info">
+    <div 
+        v-for="contactOption in contactOptions"
+        :key="contactOption.option"
+        class="contact-screen-contact-option">
       <img
-        class="contact-screen-contact-info__icon"
-        :src="require('@/assets/svg/phone.svg')"
+        class="contact-screen-contact-option__img"
+        :src="contactOption.img"
       />
-      <span class="contact-screen-contact-info__text">0176 / 81002551</span>
-    </div>
-    <div class="contact-screen-contact-info">
-      <img
-        class="contact-screen-contact-info__icon"
-        :src="require('@/assets/svg/envelope.svg')"
-      />
-      <span class="contact-screen-contact-info__text"
-        >mauril.salb@gmail.com</span
-      >
+      <span class="contact-screen-contact-option__text--black">
+        {{ contactOption.option }}
+      </span>
     </div>
     <hr class="contact-screen-divider" />
-    <a
-      class="contact-screen-contact-info"
-      href="https://www.xing.com/profile/Mauril_Salb"
+    <a 
+      v-for="platformLink in platformLinks"
+      :key="platformLink.link"
+      :href="platformLink.link"
+      class="contact-screen-platform-link"
     >
       <img
-        class="contact-screen-contact-info__icon"
-        :src="require('@/assets/svg/xing.svg')"
+        class="contact-screen-platform-link__img"
+        :src="platformLink.img"
       />
-      <span class="contact-screen-contact-info__text">@Mauril Salb</span>
-    </a>
-    <a class="contact-screen-contact-info" href="https://github.com/maurildev">
-      <img
-        class="contact-screen-contact-info__icon"
-        :src="require('@/assets/svg/github.svg')"
-      />
-      <span class="contact-screen-contact-info__text">@maurildev</span>
-    </a>
-    <a
-      class="contact-screen-contact-info"
-      href="https://www.npmjs.com/~maurildev"
-    >
-      <img
-        class="contact-screen-contact-info__icon"
-        :src="require('@/assets/svg/npm.svg')"
-      />
-      <span class="contact-screen-contact-info__text">@maurildev</span>
+      <span class="contact-screen-platform-link__text--blue">
+        {{ platformLink.profileName }}
+      </span>
     </a>
   </div>
 </template>
@@ -65,6 +48,37 @@ export default {
     "v-nav-bar": NavBar,
     "v-avatar-image": AvatarImage,
   },
+  data() {
+    return {
+      contactOptions: [
+        {
+          img: require('@/assets/svg/phone.svg'),
+          option: "0176 / 81002551"
+        },
+        {
+          img: require('@/assets/svg/envelope.svg'),
+          option: "mauril.salb@gmail.com"
+        }
+      ],
+      platformLinks: [
+        {
+          link: "https://www.xing.com/profile/Mauril_Salb",
+          img: require('@/assets/svg/xing.svg'),
+          profileName: "@Mauril Salb"
+        },
+        {
+          link: "https://github.com/maurildev",
+          img: require('@/assets/svg/github.svg'),
+          profileName: "@maurildev"
+        },
+        {
+          link: "https://www.npmjs.com/~maurildev",
+          img: require('@/assets/svg/npm.svg'),
+          profileName: "@maurildev"
+        }
+      ]
+    }
+  }
 };
 </script>
 
@@ -80,19 +94,26 @@ export default {
     padding: 10px 0;   
   }
 
-  &-contact-info {
+  &-platform-link,
+  &-contact-option {
     display: flex;
     align-items: center;
     margin: 30px 10px;
 
-    &__icon {
+    &__img {
       width: 20px;
       height: 20px;
       margin-right: 15px;
     }
 
-    &__text {
+    &__text--black {
       font-size: 14px;
+      color: #000;
+    }
+
+    &__text--blue {
+      font-size: 14px;
+      color: #438cf7;
     }
   }
 
