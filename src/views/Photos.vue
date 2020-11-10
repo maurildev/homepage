@@ -3,9 +3,9 @@
     <v-nav-bar backgroundColor="#000" />
     <div class="photos-screen-slider">
       <div class="photos-screen-slider__img"
-        v-for="(imgUrl, index) in imgUrls"
+        v-for="(img, index) in imgs"
         :key="index"
-        :style="{ backgroundImage: 'url(' + imgUrl + ')' }"
+        :style="{ backgroundImage: 'url(' + img + ')' }"
       ></div>
     </div>
   </div>
@@ -21,11 +21,10 @@ export default {
   },
   data() {
     return {
-      imgUrls: [
-        "http://maurilsalb.com/assets/images/kito-chaos.jpg",
-        "http://maurilsalb.com/assets/images/kito-chaos.jpg",
-        "http://maurilsalb.com/assets/images/kito-chaos.jpg",
-        "http://maurilsalb.com/assets/images/kito-chaos.jpg",
+      imgs: [
+        require("@/assets/photos/benji.png"),
+        require("@/assets/photos/benji-me.jpg"),
+        require("@/assets/photos/frankfurt.jpg")
       ],
     };
   },
@@ -53,9 +52,8 @@ export default {
       height: 100%;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;
-      border-radius: 5px;
-      margin-right: 20px;
+      background-size: contain;
+      margin-right: 40px;
     }
   }
 }
