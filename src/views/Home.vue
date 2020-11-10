@@ -2,29 +2,29 @@
   <div class="home-screen">
     <div class="home-screen__app-btns">
       <v-app-button
-        imgUrl="http://maurilsalb.com/assets/ios_icons/Photos.png"
+        :imgUrl="require('@/assets/app-buttons/photos.png')"
         :text="translations.home.photoAppButton"
         @click="$router.push({ name: `photos-${$route.meta.languageCode}` })"
       />
       <v-app-button
-        imgUrl="http://maurilsalb.com/assets/ios_icons/CV.png"
+        :imgUrl="require('@/assets/app-buttons/cv.png')"
         :text="translations.home.cvAppButton"
       />
       <v-app-button
-        imgUrl="http://maurilsalb.com/assets/ios_icons/Skills.png"
+        :imgUrl="require('@/assets/app-buttons/technologies.png')"
         :text="translations.home.technologyAppButton"
       />
     </div>
     <div class="home-screen__fav-bar">
       <v-app-button
-        imgUrl="http://maurilsalb.com/assets/ios_icons/Phone.png"
+        :imgUrl="require('@/assets/app-buttons/phone.png')"
         @click="$router.push({ name: `contact-${$route.meta.languageCode}` })"
       />
       <v-app-button
-        imgUrl="http://maurilsalb.com/assets/ios_icons/Messages.png"
+        :imgUrl="require('@/assets/app-buttons/messages.png')"
       />
       <v-app-button
-        imgUrl="http://maurilsalb.com/assets/ios_icons/Mail.png"
+        :imgUrl="require('@/assets/app-buttons/mail.png')"
         @click="$router.push({ name: `mails-${$route.meta.languageCode}` })"
       />
     </div>
@@ -85,5 +85,4 @@ export default {
     background-position: 50% 0%;
   }
 }
-
 </style>
