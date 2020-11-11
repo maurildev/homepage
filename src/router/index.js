@@ -1,7 +1,8 @@
 import Language from '@/views/Language.vue';
 import Home from "@/views/Home.vue";
-import Chat from '@/views/Chat.vue';
+import ChatIntro from '@/views/ChatIntro.vue';
 import Contact from '@/views/Contact.vue';
+import ChatAboutMe from '@/views/ChatAboutMe.vue';
 import Mails from "@/views/Mails.vue";
 import Photos from "@/views/Photos.vue";
 import { createRouter, createWebHashHistory } from 'vue-router';
@@ -37,20 +38,20 @@ const routes = [
     component: Home
   },
   {
-    path: '/de/chat/',
-    name: 'chat-de',
+    path: '/de/chat/einfuehrung',
+    name: 'chat-intro-de',
     meta: {
       languageCode: "de",
     },
-    component: Chat
+    component: ChatIntro
   },
   {
-    path: '/en/chat/',
-    name: 'chat-en',
+    path: '/en/chat/intro',
+    name: 'chat-intro-en',
     meta: {
       languageCode: "en",
     },
-    component: Chat
+    component: ChatIntro
   },
   {
     path: '/de/kontakt/',
@@ -67,6 +68,22 @@ const routes = [
       languageCode: "en",
     },
     component: Contact
+  },
+  {
+    path: '/de/chat/ueber-mich',
+    name: 'chat-about-me-de',
+    meta: {
+      languageCode: "de",
+    },
+    component: ChatAboutMe
+  },
+  {
+    path: '/en/chat/about-me',
+    name: 'chat-about-me-en',
+    meta: {
+      languageCode: "en",
+    },
+    component: ChatAboutMe
   },
   {
     path: '/de/mails/',

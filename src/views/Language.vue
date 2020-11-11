@@ -40,7 +40,7 @@ export default {
     ...mapMutations(["setLanguage"]),
     setLanguageAndNavigate(languageCode) {
       this.setLanguage(languageCode);
-      this.$router.push({name: `chat-${languageCode}`});
+      this.$router.push({name: `chat-intro-${languageCode}`});
     }
   },
 };

@@ -16,6 +16,13 @@ export const enTranslations = {
     cvAppButton: "CV",
     technologyAppButton: "Technologies"
   },
+  aboutMeChat: {
+    chatMessage1: "There you are again 🙋🏽‍♂️",
+    chatMessage2: "Here are some more little information about me",
+    chatMessage3: "I am 28 years old and live with my dog Benji in Frankfurt",
+    chatMessage4: "In the phone app you will find several ways to contact me",
+    chatMessage5: "See you 😉"
+  },
   mails: {
     npmSubject: "Repository vue-chat-simulator-demo ...",
     npmMessage: "Hey maurildev. Your repository vue-chat-simulator was successfully created !",

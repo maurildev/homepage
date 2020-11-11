@@ -22,6 +22,7 @@
       />
       <v-app-button
         :imgUrl="require('@/assets/app-buttons/messages.png')"
+        @click="$router.push({ name: `chat-about-me-${$route.meta.languageCode}` })"
       />
       <v-app-button
         :imgUrl="require('@/assets/app-buttons/mail.png')"

@@ -1,13 +1,9 @@
 <template>
-  <div class="chat-screen">
-    <v-nav-bar
-      :isBackButtonVisible="false"
-      :isHomeButtonHighlighted="highlightHomeButton"
-    />
-    <div class="chat-screen__chat-simulator">
+  <div class="chat-about-screen">
+    <v-nav-bar />
+    <div class="chat-about-screen__chat-simulator">
       <v-chat-simulator
         :messages="messages"
-        @completed="highlightHomeButton = true"
       />
     </div>
   </div>
@@ -23,20 +19,15 @@ export default {
     "v-chat-simulator": ChatSimulator,
     "v-nav-bar": NavBar,
   },
-  data() {
-    return {
-      highlightHomeButton: false,
-    };
-  },
   computed: {
     ...mapGetters(["translations"]),
     messages() {
       return [
-        this.translations.introChat.chatMessage1,
-        this.translations.introChat.chatMessage2,
-        this.translations.introChat.chatMessage3,
-        this.translations.introChat.chatMessage4,
-        this.translations.introChat.chatMessage5,
+        this.translations.aboutMeChat.chatMessage1,
+        this.translations.aboutMeChat.chatMessage2,
+        this.translations.aboutMeChat.chatMessage3,
+        this.translations.aboutMeChat.chatMessage4,
+        this.translations.aboutMeChat.chatMessage5,
       ];
     },
   },
@@ -46,7 +37,7 @@ export default {
 <style lang="scss" scoped>
 @import "styles/global.scss";
 
-.chat-screen {
+.chat-about-screen {
   @include screen;
   background: $white;
 }
