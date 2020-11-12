@@ -13,6 +13,7 @@
       <v-app-button
         :imgUrl="require('@/assets/app-buttons/technologies.png')"
         :text="translations.home.technologyAppButton"
+        @click="$router.push({ name: `technologies-${$route.meta.languageCode}` })"
       />
     </div>
     <div class="home-screen__fav-bar">
