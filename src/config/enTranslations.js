@@ -24,11 +24,11 @@ export const enTranslations = {
     chatMessage5: "See you 😉"
   },
   mails: {
-    npmSubject: "Repository vue-chat-simulator-demo ...",
-    npmMessage: "Hey maurildev. Your repository vue-chat-simulator was successfully created !",
-    gitHubChatSimulatorSubject: "Repository vue-chat-simulator-demo ...",
-    gitHubChatSimulatorMessage:  "Hey maurildev. Your repository vue-chat-simulator was successfully created !",
-    gitHubMaurilDevSubject: "Repository maurildev-homepage ...",
-    gitHubMaurilDevMessage: "Hey maurildev. Your repository maurildev-homepage was successfully created !"
+    npmSubject: "'Vue-chat-simulator' wurde veröfffentlicht...",
+    npmMessage: "Hi maurildev! A new version of your package 'vue-chat-simulator' (1.0.2) was successfully deployed !",
+    gitHubChatSimulatorSubject: "Repository 'vue-chat-simulator-demo' ...",
+    gitHubChatSimulatorMessage:  "Hey maurildev. Your repository 'vue-chat-simulator' was successfully created !",
+    gitHubMaurilDevSubject: "Repository 'maurildev-homepage' ...",
+    gitHubMaurilDevMessage: "Hey maurildev. Your repository 'maurildev-homepage' was successfully created !"
   }
 };
