@@ -5,6 +5,7 @@ import Contact from '@/views/Contact.vue';
 import ChatAboutMe from '@/views/ChatAboutMe.vue';
 import Mails from "@/views/Mails.vue";
 import Photos from "@/views/Photos.vue";
+import Technologies from "@/views/Technologies.vue";
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routes = [
@@ -116,6 +117,22 @@ const routes = [
       languageCode: "en",
     },
     component: Photos
+  },
+  {
+    path: '/de/technologien/',
+    name: 'technologies-de',
+    meta: {
+      languageCode: "de",
+    },
+    component: Technologies
+  },
+  {
+    path: '/en/technologies/',
+    name: 'technologies-en',
+    meta: {
+      languageCode: "en",
+    },
+    component: Technologies
   },
 ]
 

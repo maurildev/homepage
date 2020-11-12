@@ -30,5 +30,12 @@ export const deTranslations = {
     gitHubChatSimulatorMessage:  "Hey maurildev. Dein repository 'vue-chat-simulator' wurde erfolgreich erstellt !",
     gitHubMaurilDevSubject: "Repository 'maurildev-homepage' ...",
     gitHubMaurilDevMessage: "Hey maurildev. Dein repository 'maurildev-homepage' wurde erfolgreich erstellt !"
+  },
+  technologies: {
+    languages: "Sprachen",
+    javascriptFrameworks: "JavaScript Frameworks",
+    cssFrameworks: "CSS Frameworks",
+    design:  "Design",
+    other: "Weiteres",
   }
 };
