@@ -2,7 +2,7 @@
   <div class="contact-screen">
     <v-nav-bar />
     <div class="contact-screen-header">
-      <v-avatar-image
+      <v-avatar
         imgUrl="http://maurilsalb.com/assets/images/portrait.jpg"
         text="Mauril"
         big
@@ -40,13 +40,13 @@
 
 <script>
 import NavBar from "@/components/shared/navigation/NavBar.vue";
-import AvatarImage from "@/components/shared/avatars/AvatarImage.vue";
+import Avatar from "@/components/shared/media/Avatar.vue";
 
 export default {
   name: ["Contact"],
   components: {
     "v-nav-bar": NavBar,
-    "v-avatar-image": AvatarImage,
+    "v-avatar": Avatar,
   },
   data() {
     return {

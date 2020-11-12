@@ -2,7 +2,7 @@
   <div class="mails-screen">
     <v-nav-bar />
     <div class="mails-screen-header">
-      <v-avatar-image
+      <v-avatar
         imgUrl="http://maurilsalb.com/assets/images/portrait.jpg"
         small
       />
@@ -36,14 +36,14 @@
 
 <script>
 import NavBar from "@/components/shared/navigation/NavBar.vue";
-import AvatarImage from "@/components/shared/avatars/AvatarImage.vue";
+import Avatar from "@/components/shared/media/Avatar.vue";
 import { mapGetters } from "vuex";
 
 export default {
   name: ["Mails"],
   components: {
     "v-nav-bar": NavBar,
-    "v-avatar-image": AvatarImage,
+    "v-avatar": Avatar,
   },
   computed: {
     ...mapGetters(["translations"]),
