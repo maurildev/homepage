@@ -22,7 +22,14 @@
 </template>
 
 <style lang="scss" scoped>
-@media only screen and (min-width: 768px) {
+@import "styles/global.scss";
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+@include tablet {
   .iphone-x {
     display: inline-block;
     position: relative;
@@ -134,21 +141,13 @@
       }
 
       .screen {
-        width: 100vw;
+        position: relative;
+        width: 100%;
         height: 100%;
-        position: fixed;
+        border-radius: 40px;
+        box-shadow: none;
+        overflow: hidden;
         z-index: 1;
-      }
-
-      @media only screen and (min-width: 768px) {
-        .screen {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          border-radius: 40px;
-          box-shadow: none;
-          overflow: hidden;
-        }
       }
 
       .top-bar,

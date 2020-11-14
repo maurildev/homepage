@@ -9,8 +9,14 @@ $white: #fff;
 }
 
 @mixin screen {
-    height: 100vh;
+    width: 100vw;
+    height: 100%;   
+    position: fixed;
+    overflow-y: scroll;
+    
     @include tablet {
+        position: relative;
+        width: 100%;
         height: 100%;
     }
 }
