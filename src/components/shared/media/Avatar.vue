@@ -44,10 +44,9 @@ export default {
 <style lang="scss" scoped>
 .avatar {
   &__img--small {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     border-radius: 125px;
-    box-shadow: 0px 0px 10px 1px #3c3b3b;
   }
 
   &__img,
@@ -55,14 +54,12 @@ export default {
     width: 100px;
     height: 100px;
     border-radius: 100px;
-    box-shadow: 0px 0px 10px 1px #3c3b3b;
   }
 
   &__img--big {
     width: 125px;
     height: 125px;
     border-radius: 125px;
-    box-shadow: 0px 0px 10px 1px #3c3b3b;
   }
 
   &__text {

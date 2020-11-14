@@ -13,7 +13,7 @@ export const deTranslations = {
   },
   home: {
     photoAppButton: "Fotos",
-    cvAppButton: "CV",
+    projectsAppButton: "Projekte",
     technologyAppButton: "Technologien"
   },
   aboutMeChat: {
