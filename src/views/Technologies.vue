@@ -205,14 +205,6 @@ export default {
           name: "npm"
         },
         {
-          img: require("@/assets/technology-logos/bem.png"),
-          name: "BEM"
-        },
-        {
-          img: require("@/assets/technology-logos/json.png"),
-          name: "JSON"
-        },
-        {
           img: require("@/assets/technology-logos/jenkins.png"),
           name: "Jenkins"
         },
@@ -224,6 +216,14 @@ export default {
           img: require("@/assets/technology-logos/confluence.jpeg"),
           name: "Confluence"
         },
+        {
+          img: require("@/assets/technology-logos/bem.png"),
+          name: "BEM"
+        },
+        {
+          img: require("@/assets/technology-logos/json.png"),
+          name: "JSON"
+        }
       ]
     };
   },
@@ -239,7 +239,6 @@ export default {
 .technologies-screen {
   @include screen;
   background: $white;
-  overflow-y: scroll;
 
   &__headline {
     display: block;
