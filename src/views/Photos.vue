@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       imgs: [
-        require("@/assets/photos/benji.png"),
+        require("@/assets/photos/benji.jpg"),
         require("@/assets/photos/benji-me.jpg"),
         require("@/assets/photos/frankfurt.jpg")
       ],
