@@ -8,7 +8,8 @@
       />
       <v-app-button
         :imgUrl="require('@/assets/app-buttons/cv.png')"
-        :text="translations.home.cvAppButton"
+        :text="translations.home.projectsAppButton"
+        @click="$router.push({ name: `projects-${$route.meta.languageCode}` })"
       />
       <v-app-button
         :imgUrl="require('@/assets/app-buttons/technologies.png')"
