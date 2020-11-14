@@ -3,7 +3,7 @@
     <v-nav-bar />
     <div class="mails-screen-header">
       <v-avatar
-        imgUrl="http://maurilsalb.com/assets/images/portrait.jpg"
+        :imgUrl="require('@/assets/photos/mauril.jpg')"
         small
       />
       <div class="mails-screen-header-contact">
