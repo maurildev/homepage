@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
-import { deTranslations } from '../config/deTranslations';
-import { enTranslations } from '../config/enTranslations';
+import { deTranslations } from '../config/translations/deTranslations';
+import { enTranslations } from '../config/translations/enTranslations';
 
 const state = {
   translations: undefined,
