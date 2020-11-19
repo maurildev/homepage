@@ -5,8 +5,10 @@ import Contact from '@/views/Contact.vue';
 import ChatAboutMe from '@/views/ChatAboutMe.vue';
 import Mails from "@/views/Mails.vue";
 import Photos from "@/views/Photos.vue";
-import Technologies from "@/views/Technologies.vue";
 import Projects from "@/views/Projects.vue";
+import Project from "@/views/Project.vue";
+import Technologies from "@/views/Technologies.vue";
+
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routes = [
@@ -134,6 +136,22 @@ const routes = [
       languageCode: "en",
     },
     component: Projects
+  },
+  {
+    path: '/de/projekte/:project',
+    name: 'project-de',
+    meta: {
+      languageCode: "de",
+    },
+    component: Project
+  },
+  {
+    path: '/en/projects/:project',
+    name: 'project-en',
+    meta: {
+      languageCode: "en",
+    },
+    component: Project
   },
   {
     path: '/de/technologien/',
