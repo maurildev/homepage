@@ -8,33 +8,38 @@
         big
       />
     </div>
-    <div 
+    <ul class="contact-screen-contact-list">
+      <li
         v-for="contactOption in contactOptions"
         :key="contactOption.option"
-        class="contact-screen-contact-option">
-      <img
-        class="contact-screen-contact-option__img"
-        :src="contactOption.img"
-      />
-      <span class="contact-screen-contact-option__text--black">
-        {{ contactOption.option }}
-      </span>
-    </div>
+        class="contact-screen-contact-list-item"
+      >
+        <img
+          class="contact-screen-contact-list-item__img"
+          :src="contactOption.img"
+        />
+        <span class="contact-screen-contact-list-item__text--black">
+          {{ contactOption.option }}
+        </span>
+      </li>
+    </ul>
     <hr class="contact-screen-divider" />
-    <a 
-      v-for="platformLink in platformLinks"
-      :key="platformLink.link"
-      :href="platformLink.link"
-      class="contact-screen-platform-link"
-    >
-      <img
-        class="contact-screen-platform-link__img"
+    <ul class="contact-screen-platform-list">
+      <li
+        v-for="platformLink in platformLinks"
+        :key="platformLink.link"
+        @click="navigateToLink(platformLink.link)"
+        class="contact-screen-platform-list-item"
+      >
+       <img
+        class="contact-screen-platform-list-item__img"
         :src="platformLink.img"
-      />
-      <span class="contact-screen-platform-link__text--blue">
-        {{ platformLink.profileName }}
-      </span>
-    </a>
+        />
+        <span class="contact-screen-platform-list-item__text--blue">
+          {{ platformLink.profileName }}
+        </span>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -78,6 +83,11 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    navigateToLink(link) {
+      window.open(link, '_blank')
+    }
   }
 };
 </script>
@@ -94,26 +104,32 @@ export default {
     padding: 10px 0;   
   }
 
-  &-platform-link,
-  &-contact-option {
-    display: flex;
-    align-items: center;
-    margin: 30px 10px;
+  &-contact-list,
+  &-platform-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    &__img {
-      width: 20px;
-      height: 20px;
-      margin-right: 15px;
-    }
+    &-item {
+      display: flex;
+      align-items: center;
+      margin: 30px 10px;
 
-    &__text--black {
-      font-size: 14px;
-      color: #000;
-    }
+      &__img {
+        width: 20px;
+        height: 20px;
+        margin-right: 15px;
+      }
 
-    &__text--blue {
-      font-size: 14px;
-      color: #438cf7;
+      &__text--black {
+        font-size: 14px;
+        color: #000;
+      }
+
+      &__text--blue {
+        font-size: 14px;
+        color: #438cf7;
+      }
     }
   }
 

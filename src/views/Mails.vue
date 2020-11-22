@@ -15,22 +15,24 @@
         </span>
       </div>
     </div>
-    <a
-      v-for="mailLink in mailLinks"
-      :key="mailLink.link"
-      :href="mailLink.link"
-      class="mails-screen-mail-link"
-    >
-      <span class="mails-screen-mail-link__text--bold">
-        {{ mailLink.sender }}
-      </span>
-      <span class="mails-screen-mail-link__text--regular">
-        {{ mailLink.subject }}
-      </span>
-      <p class="mails-screen-mail-link__text--light">
-        {{ mailLink.message }}
-      </p>
-    </a>
+    <ul class="mails-screen-mail-list">
+      <li 
+        v-for="mailLink in mailLinks"
+        :key="mailLink.link"
+        @click="navigateToLink(mailLink.link)"
+        class="mails-screen-mail-list-item"      
+      >
+        <span class="mails-screen-mail-list-item__text--bold">
+          {{ mailLink.sender }}
+        </span>
+        <span class="mails-screen-mail-list-item__text--regular">
+          {{ mailLink.subject }}
+        </span>
+        <p class="mails-screen-mail-list-item__text--light">
+          {{ mailLink.message }}
+        </p>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -70,6 +72,11 @@ export default {
       ];
     },
   },
+  methods: {
+    navigateToLink(link) {
+      window.open(link, '_blank')
+    }
+  }
 };
 </script>
 
@@ -102,45 +109,51 @@ export default {
     }
   }
 
-  &-mail-link {
-    display: block;
-    border-top: 1px solid #dedede;
-    padding: 5px 10px;
-    transition: 0.75s all;
-    cursor: pointer;
+  &-mail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    &__text--bold {
+    &-item {
       display: block;
-      font-weight: bold;
-      color: #000000;
-      text-align: left;
-    }
+      border-top: 1px solid #dedede;
+      padding: 5px 10px;
+      transition: 0.75s all;
+      cursor: pointer;
 
-    &__text--regular {
-      display: block;
-      font-weight: normal;
-      color: #000000;
-      text-align: left;
-    }
+      &__text--bold {
+        display: block;
+        font-weight: bold;
+        color: #000000;
+        text-align: left;
+      }
 
-    &__text--light {
-      display: block;
-      color: #9a9a9a;
-      text-align: left;
-      margin: 5px 0;
-    }
+      &__text--regular {
+        display: block;
+        font-weight: normal;
+        color: #000000;
+        text-align: left;
+      }
 
-    &:hover {
-      background-color: #3780ee;
-    }
+      &__text--light {
+        display: block;
+        color: #9a9a9a;
+        text-align: left;
+        margin: 5px 0;
+      }
 
-    &:hover &__text--bold {
-      color: $white;
-    }
+      &:hover {
+        background-color: #3780ee;
+      }
 
-    &:hover &__text--regular,
-    &:hover &__text--light {
-      color: $white;
+      &:hover &__text--bold {
+        color: $white;
+      }
+
+      &:hover &__text--regular,
+      &:hover &__text--light {
+        color: $white;
+      }
     }
   }
 }

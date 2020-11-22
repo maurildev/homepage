@@ -1,56 +1,76 @@
 <template>
     <div class="technologies-screen">
       <v-nav-bar />
-      <h1 class="technologies-screen__headline">{{ translations.technologies.languages }}</h1>
-      <div class="technologies-screen-technology-logos">
-        <v-logo
-           v-for="logo in languageLogos"
+      <h1 class="technologies-screen-headline">{{ translations.technologies.languages }}</h1>
+      <ul class="technologies-screen-technology-list">
+        <li
+          v-for="logo in languageLogos"
           :key="logo.name"
-          :imgSrc="logo.img"
-          :text="logo.name"
-          small
-        />
-      </div>
-      <h1 class="technologies-screen__headline">{{ translations.technologies.javascriptFrameworks }}</h1>
-      <div class="technologies-screen-technology-logos">
-        <v-logo
-           v-for="logo in javascriptFrameworkLogos"
+          class="technologies-screen-technology-list-item"
+        >
+          <v-logo
+            :imgSrc="logo.img"
+            :text="logo.name"
+            small
+          />
+        </li>
+      </ul>
+      <h1 class="technologies-screen-headline">{{ translations.technologies.javascriptFrameworks }}</h1>
+      <ul class="technologies-screen-technology-list">
+        <li 
+          v-for="logo in javascriptFrameworkLogos"
           :key="logo.name"
-          :imgSrc="logo.img"
-          :text="logo.name"
-          small
-        />
-      </div>
-      <h1 class="technologies-screen__headline">{{ translations.technologies.cssFrameworks }}</h1>
-      <div class="technologies-screen-technology-logos">
-        <v-logo
+          class="technologies-screen-technology-list-item"
+        >
+          <v-logo
+            :imgSrc="logo.img"
+            :text="logo.name"
+            small
+          />
+        </li>
+      </ul>
+      <h1 class="technologies-screen-headline">{{ translations.technologies.cssFrameworks }}</h1>
+      <ul class="technologies-screen-technology-list">
+        <li 
            v-for="logo in cssFrameworkLogos"
           :key="logo.name"
-          :imgSrc="logo.img"
-          :text="logo.name"
-          small
-        />
-      </div>
-      <h1 class="technologies-screen__headline">{{ translations.technologies.design }}</h1>
-      <div class="technologies-screen-technology-logos">
-        <v-logo
-           v-for="logo in designLogos"
+          class="technologies-screen-technology-list-item"
+        >
+          <v-logo
+            :imgSrc="logo.img"
+            :text="logo.name"
+            small
+          />
+        </li>
+      </ul>
+      <h1 class="technologies-screen-headline">{{ translations.technologies.design }}</h1>
+      <div class="technologies-screen-technology-list">
+        <li
+          v-for="logo in designLogos"
           :key="logo.name"
-          :imgSrc="logo.img"
-          :text="logo.name"
-          small
-        />
+          class="technologies-screen-technology-list-item"
+        >
+          <v-logo
+            :imgSrc="logo.img"
+            :text="logo.name"
+            small
+          />
+        </li>
       </div>
-      <h1 class="technologies-screen__headline">{{ translations.technologies.other }}</h1>
-      <div class="technologies-screen-technology-logos">
-        <v-logo
-           v-for="logo in otherLogos"
+      <h1 class="technologies-screen-headline">{{ translations.technologies.other }}</h1>
+      <ul class="technologies-screen-technology-list">
+        <li
+          v-for="logo in otherLogos"
           :key="logo.name"
-          :imgSrc="logo.img"
-          :text="logo.name"
-          small
-        />
-      </div>
+          class="technologies-screen-technology-list-item"
+        >
+          <v-logo
+            :imgSrc="logo.img"
+            :text="logo.name"
+            small
+          />
+        </li>
+      </ul>
     </div>
 </template>
 
@@ -240,18 +260,20 @@ export default {
   @include screen;
   background: $white;
 
-  &__headline {
+  &-headline {
     display: block;
     font-size: 28px;
     color: #000;
     margin-bottom: 30px;
   }
 
-  &-technology-logos{
+  &-technology-list{
     display: grid;
     grid-template-columns: repeat(auto-fill,100px);
     grid-row-gap: 25px;
     justify-content: space-around;
+    list-style: none;
+    padding: 0;
     margin-bottom: 60px;
   }
 }

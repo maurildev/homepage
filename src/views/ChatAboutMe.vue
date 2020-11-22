@@ -2,9 +2,7 @@
   <div class="chat-about-screen">
     <v-nav-bar />
     <div class="chat-about-screen__chat-simulator">
-      <v-chat-simulator
-        :messages="messages"
-      />
+      <v-chat-simulator :messages="messages"/>
     </div>
   </div>
 </template>

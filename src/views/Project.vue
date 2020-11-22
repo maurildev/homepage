@@ -64,7 +64,7 @@ export default {
 
 .project-screen {
   @include screen;
-  background: #fff;
+  background: $white;
 
   &-header {
     background-color: #fbfaff;
@@ -84,6 +84,8 @@ export default {
   }
 
   &-task-list {
+    list-style: none;
+
     &__item {
       font-size: 14px;
       text-align: left;
