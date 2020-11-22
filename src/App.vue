@@ -56,7 +56,7 @@ a {
     align-items: center;
     height: 100vh;
     background-color: #bcada1;
-    background-image: url(https://images.pexels.com/photos/172277/pexels-photo-172277.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-image: url('assets/photos/desk.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
