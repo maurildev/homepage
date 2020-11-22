@@ -31,6 +31,10 @@ export const enTranslations = {
     gitHubMaurilDevSubject: "Repository 'maurildev-homepage' ...",
     gitHubMaurilDevMessage: "Hey maurildev. Your repository 'maurildev-homepage' was successfully created !"
   },
+  project: {
+    tasks: "Tasks",
+    technologies: "Technologies"
+  },
   technologies: {
     languages: "Languages",
     javascriptFrameworks: "JavaScript Frameworks",

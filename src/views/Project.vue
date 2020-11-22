@@ -11,7 +11,7 @@
           {{ project.from }} - {{ project.to }}
         </span>
       </div>
-      <h1 class="project-screen-headline">Tätigkeiten</h1>
+      <h1 class="project-screen-headline">{{ translations.project.tasks }}</h1>
       <ul class="project-screen-task-list">
         <li 
           v-for="task in project.tasks" 
@@ -21,7 +21,7 @@
           {{ task }}
         </li>
       </ul>
-      <h1 class="project-screen-headline">Technologien</h1>
+      <h1 class="project-screen-headline">{{ translations.project.technologies }}</h1>
       <ul class="project-screen-technology-list">
         <li 
           v-for="logo in project.technologies"
@@ -41,6 +41,7 @@
 import NavBar from "@/components/shared/navigation/NavBar.vue";
 import Avatar from "@/components/shared/media/Avatar.vue";
 import Logo from "@/components/shared/media/Logo.vue";
+import { mapGetters } from "vuex";
 import { projects } from "@/config/projects/projects";
 
 export default {
@@ -51,6 +52,7 @@ export default {
     "v-logo": Logo
   },
   computed: {
+    ...mapGetters(["translations"]),
     project() {
       return projects[this.$route.params.project]
     }

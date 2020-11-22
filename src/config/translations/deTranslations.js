@@ -31,11 +31,15 @@ export const deTranslations = {
     gitHubMaurilDevSubject: "Repository 'maurildev-homepage' ...",
     gitHubMaurilDevMessage: "Hey maurildev. Dein repository 'maurildev-homepage' wurde erfolgreich erstellt !"
   },
+  project: {
+    tasks: "Tätigkeiten",
+    technologies: "Technologien"
+  },
   technologies: {
     languages: "Sprachen",
     javascriptFrameworks: "JavaScript Frameworks",
     cssFrameworks: "CSS Frameworks",
     design:  "Design",
     other: "Weiteres",
-  }
+  },
 };
