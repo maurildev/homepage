@@ -6,7 +6,7 @@
         <v-logo
            v-for="logo in languageLogos"
           :key="logo.name"
-          :imgUrl="logo.img"
+          :imgSrc="logo.img"
           :text="logo.name"
           small
         />
@@ -16,7 +16,7 @@
         <v-logo
            v-for="logo in javascriptFrameworkLogos"
           :key="logo.name"
-          :imgUrl="logo.img"
+          :imgSrc="logo.img"
           :text="logo.name"
           small
         />
@@ -26,7 +26,7 @@
         <v-logo
            v-for="logo in cssFrameworkLogos"
           :key="logo.name"
-          :imgUrl="logo.img"
+          :imgSrc="logo.img"
           :text="logo.name"
           small
         />
@@ -36,7 +36,7 @@
         <v-logo
            v-for="logo in designLogos"
           :key="logo.name"
-          :imgUrl="logo.img"
+          :imgSrc="logo.img"
           :text="logo.name"
           small
         />
@@ -46,7 +46,7 @@
         <v-logo
            v-for="logo in otherLogos"
           :key="logo.name"
-          :imgUrl="logo.img"
+          :imgSrc="logo.img"
           :text="logo.name"
           small
         />

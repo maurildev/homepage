@@ -8,7 +8,7 @@
         class="projects-screen-project-link"
     >
         <v-avatar 
-            :imgUrl="project.img"
+            :imgSrc="project.img"
             small
         />
         <div class="projects-screen-project-link-description">

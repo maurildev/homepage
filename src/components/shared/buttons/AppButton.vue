@@ -1,6 +1,6 @@
 <template>
   <div class="app-button">
-    <img class="app-button__img" :src="imgUrl" />
+    <img class="app-button__img" :src="imgSrc" />
     <span class="app-button__text"> {{ text }} </span>
   </div>
 </template>
@@ -9,7 +9,7 @@
 export default {
   name: "AppButton",
   props: {
-    imgUrl: {
+    imgSrc: {
       type: String,
       required: true,
     },

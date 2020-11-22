@@ -1,6 +1,6 @@
 <template>
   <button class="pill" :style="styles">
-    <img class="pill__img" :src="imgUrl" v-if="imgUrl" />
+    <img class="pill__img" :src="imgSrc" v-if="imgSrc" />
     <span class="pill__text">{{ text }}</span>
   </button>
 </template>
@@ -9,7 +9,7 @@
 export default {
   name: "Pill",
   props: {
-    imgUrl: {
+    imgSrc: {
       type: String,
       required: false,
     },

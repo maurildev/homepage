@@ -3,7 +3,7 @@
     <v-nav-bar />
     <div class="contact-screen-header">
       <v-avatar
-        :imgUrl="require('@/assets/photos/mauril.jpg')"
+        :imgSrc="require('@/assets/photos/mauril.jpg')"
         text="Mauril"
         big
       />

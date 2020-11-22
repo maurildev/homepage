@@ -7,7 +7,7 @@
         'avatar__img--big': big,
         'avatar__img': (small === false) && (medium === false) && (big === false),
       }"
-      :src="imgUrl"
+      :src="imgSrc"
     />
     <span v-if="text" class="avatar__text">{{ text }}</span>
   </div>
@@ -17,7 +17,7 @@
 export default {
   name: "AvatarImg",
   props: {
-    imgUrl: {
+    imgSrc: {
       type: String,
       required: true,
     },

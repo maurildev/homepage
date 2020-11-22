@@ -3,7 +3,7 @@
     <div class="project-screen">
       <div class="project-screen-header">
         <v-avatar
-          :imgUrl="project.img"
+          :imgSrc="project.img"
           :text="project.company"
           big
         />
@@ -28,7 +28,7 @@
           :key="logo.name"
           class="project-screen-technology-list__item">
             <v-logo
-              :imgUrl="logo.img"
+              :imgSrc="logo.img"
               :text="logo.name"
               small
             />

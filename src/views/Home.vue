@@ -2,32 +2,32 @@
   <div class="home-screen">
     <div class="home-screen__app-btns">
       <v-app-button
-        :imgUrl="require('@/assets/app-buttons/photos.png')"
+        :imgSrc="require('@/assets/app-buttons/photos.png')"
         :text="translations.home.photoAppButton"
         @click="$router.push({ name: `photos-${$route.meta.languageCode}` })"
       />
       <v-app-button
-        :imgUrl="require('@/assets/app-buttons/cv.png')"
+        :imgSrc="require('@/assets/app-buttons/cv.png')"
         :text="translations.home.projectsAppButton"
         @click="$router.push({ name: `projects-${$route.meta.languageCode}` })"
       />
       <v-app-button
-        :imgUrl="require('@/assets/app-buttons/technologies.png')"
+        :imgSrc="require('@/assets/app-buttons/technologies.png')"
         :text="translations.home.technologyAppButton"
         @click="$router.push({ name: `technologies-${$route.meta.languageCode}` })"
       />
     </div>
     <div class="home-screen__fav-bar">
       <v-app-button
-        :imgUrl="require('@/assets/app-buttons/phone.png')"
+        :imgSrc="require('@/assets/app-buttons/phone.png')"
         @click="$router.push({ name: `contact-${$route.meta.languageCode}` })"
       />
       <v-app-button
-        :imgUrl="require('@/assets/app-buttons/messages.png')"
+        :imgSrc="require('@/assets/app-buttons/messages.png')"
         @click="$router.push({ name: `chat-about-me-${$route.meta.languageCode}` })"
       />
       <v-app-button
-        :imgUrl="require('@/assets/app-buttons/mail.png')"
+        :imgSrc="require('@/assets/app-buttons/mail.png')"
         @click="$router.push({ name: `mails-${$route.meta.languageCode}` })"
       />
     </div>

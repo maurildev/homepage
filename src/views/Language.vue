@@ -6,7 +6,7 @@
     />
     <div class="language-screen__pills">
       <v-pill
-        :imgUrl="require('@/assets/svg/flag-england.svg')"
+        :imgSrc="require('@/assets/svg/flag-england.svg')"
         text="English"
         backgroundColor="#f2f1f6"
         color="#000"
@@ -15,7 +15,7 @@
         @click="setLanguageAndNavigate('en')"
       />
       <v-pill
-        :imgUrl="require('@/assets/svg/flag-germany.svg')"
+        :imgSrc="require('@/assets/svg/flag-germany.svg')"
         text="Deutsch"
         backgroundColor="#f2f1f6"
         color="#000"
