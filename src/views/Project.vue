@@ -1,6 +1,6 @@
 <template>
-    <v-nav-bar />
     <div class="project-screen">
+      <v-nav-bar />
       <div class="project-screen-header">
         <v-avatar
           :imgSrc="project.img"
